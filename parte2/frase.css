@@ -1,0 +1,117 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+body {
+  font-family: "Bree Serif", serif;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#testoAlternato {
+  border: 2px solid black;
+  padding: 1em;
+  width: 300px;
+}
+
+p {
+  font-weight: bold;
+}
+
+.parole {
+  color: #68869b;
+}
+
+i {
+  display: inline-block;
+}
+
+#first {
+  opacity: 0;
+}
+
+#second {
+  opacity: 0;
+  transform: translateX(192px);
+}
+
+#third {
+  opacity: 0;
+  transform: translateX(79px);
+}
+
+@keyframes firstWord {
+  0% {
+    transform: translate(0px, -370px) rotate(360deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0px, 335px);
+    opacity: 0;
+  }
+}
+
+@keyframes secondWord {
+  0% {
+    transform: translate(192px, -370px) rotate(360deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(192px, -10px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(192px, 300px);
+    opacity: 0;
+  }
+}
+
+@keyframes thirdWord {
+  0% {
+    transform: translate(79px, -370px) rotate(360deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(79px, -10px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(79px, 300px);
+    opacity: 0;
+  }
+}
+
+.firstWordAnimation {
+  animation: firstWord 6s linear 0s;
+}
+
+.secondWordAnimation {
+  animation: secondWord 6s linear 6s;
+}
+
+.thirdWordAnimation {
+  animation: thirdWord 6s linear 12s;
+}
