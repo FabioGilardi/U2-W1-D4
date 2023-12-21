@@ -29,6 +29,7 @@ p {
   justify-content: center;
   align-items: center;
   transition: transform 0.25s linear 0s;
+  opacity: 0;
 }
 .yellow {
   background: rgb(189, 189, 163);
@@ -80,17 +81,6 @@ p {
   transform: rotate(4deg);
 }
 
-/* #box-1,
-#box-2,
-#box-3,
-#box-4,
-#box-5,
-#box-6,
-#box-7,
-#box-8 {
-  opacity: 0;
-} */
-
 #box-1:hover,
 #box-2:hover,
 #box-3:hover,
@@ -102,25 +92,33 @@ p {
   transform: scale(1.2) rotate(0deg);
 }
 
-/* @keyframes post1 {
+@keyframes post {
   0% {
     transform: scale(3);
-    opacity: 1;
   }
 
   100% {
-    transform: scale(1.2) rotate(-4deg);
+    transform: scale(1);
+  }
+}
+
+@keyframes opac {
+  0% {
+    opacity: 1;
+  }
+  100% {
     opacity: 1;
   }
 }
-@keyframes post2 {
+
+/* @keyframes post2 {
   0% {
     transform: scale(3);
     opacity: 1;
   }
 
   100% {
-    transform: scale(1.2) rotate(4deg);
+    transform: scale(1) rotate(4deg);
     opacity: 1;
   }
 }
@@ -131,7 +129,7 @@ p {
   }
 
   100% {
-    transform: scale(1.2) rotate(-9deg);
+    transform: scale(1) rotate(-9deg);
     opacity: 1;
   }
 }
@@ -142,7 +140,7 @@ p {
   }
 
   100% {
-    transform: scale(1.2) rotate(5deg);
+    transform: scale(1) rotate(5deg);
     opacity: 1;
   }
 }
@@ -153,7 +151,7 @@ p {
   }
 
   100% {
-    transform: scale(1.2) rotate(-8deg);
+    transform: scale(1) rotate(-8deg);
     opacity: 1;
   }
 }
@@ -164,7 +162,7 @@ p {
   }
 
   100% {
-    transform: scale(1.2) rotate(-12deg);
+    transform: scale(1) rotate(-12deg);
     opacity: 1;
   }
 }
@@ -175,7 +173,7 @@ p {
   }
 
   100% {
-    transform: scale(1.2) rotate(-8deg);
+    transform: scale(1) rotate(-8deg);
     opacity: 1;
   }
 }
@@ -186,32 +184,32 @@ p {
   }
 
   100% {
-    transform: scale(1.2) rotate(-4deg);
+    transform: scale(1) rotate(-4deg);
     opacity: 1;
   }
-}
+} */
 
 .post1 {
-  animation: post1 1s linear 0s forwards;
+  animation: post 1s linear 0s, opac 1s linear 0s forwards;
 }
 .post2 {
-  animation: post2 1s linear 1s forwards;
+  animation: post 1s linear 1s, opac 1s linear 1s forwards;
 }
 .post3 {
-  animation: post3 1s linear 2s forwards;
+  animation: post 1s linear 2s, opac 1s linear 2s forwards;
 }
 .post4 {
-  animation: post4 1s linear 3s forwards;
+  animation: post 1s linear 3s, opac 1s linear 3s forwards;
 }
 .post5 {
-  animation: post5 1s linear 2s forwards;
+  animation: post 1s linear 2s, opac 1s linear 2s forwards;
 }
 .post6 {
-  animation: post6 1s linear 3s forwards;
+  animation: post 1s linear 3s, opac 1s linear 3s forwards;
 }
 .post7 {
-  animation: post7 1s linear 1s forwards;
+  animation: post 1s linear 1s, opac 1s linear 1s forwards;
 }
 .post8 {
-  animation: post8 1s linear 0s forwards;
-} */
+  animation: post 1s linear 0s, opac 1s linear 0s forwards;
+}
